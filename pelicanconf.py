@@ -45,6 +45,10 @@ EXTRA_PATH_METADATA = {
     'extra/favicon.ico': {'path': 'favicon.ico'},
 }
 
+# If you don't set a summary, this is how many words
+# from the start will be automatically turned into one.
+SUMMARY_MAX_LENGTH = 0
+
 # Customization
 THEME = 'themes/pelican-hyde'
 COLOR_THEME = '07'
