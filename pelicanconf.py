@@ -40,6 +40,11 @@ AUTHOR_URL = 'author/{slug}/'
 CATEGORY_URL = 'category/{slug}/'
 TAG_URL = 'tag/{slug}/'
 
+STATIC_PATHS = ['images', 'extra']
+EXTRA_PATH_METADATA = {
+    'extra/favicon.ico': {'path': 'favicon.ico'},
+}
+
 # Customization
 THEME = 'themes/pelican-hyde'
 COLOR_THEME = '07'
@@ -53,4 +58,3 @@ SOCIAL = (('youtube-play', 'https://www.youtube.com/@tian_creator'),
 PROFILE_IMAGE = 'avatar.jpg'
 
 MENUITEMS = (('Home', '/'),)
-
