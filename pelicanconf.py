@@ -53,7 +53,7 @@ COLOR_THEME = '07'
 # you want from this list: https://forkaweso.me/Fork-Awesome/icons/
 SOCIAL = (('youtube-play', 'https://www.youtube.com/@tian_creator'),
           ('instagram', 'https://www.instagram.com/tian_creator'),
-          ('linkedin', 'linkedin.com/in/tian-lin-mit'),)
+          ('linkedin', 'https://linkedin.com/in/tian-lin-mit'),)
 
 PROFILE_IMAGE = 'avatar.jpg'
 
