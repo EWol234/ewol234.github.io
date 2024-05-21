@@ -58,7 +58,6 @@ html {
   padding: 2rem 1rem;
   color: rgba(255,255,255,.5);
   background-color: #202020;
-  font-family: "Lora", serif;
 }
 @media (min-width: 48em) {
   .sidebar {
@@ -82,6 +81,7 @@ html {
   color: #934b23;
   margin-top: 0;
   font-size: 3rem;
+  font-family: "Pacifico", sans-serif;
 }
 
 .sidebar-about h5 {
