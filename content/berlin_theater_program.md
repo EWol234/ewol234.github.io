@@ -1,5 +1,5 @@
 title: Berlin Theater Program, Summer 2022
-date: 2024-05-22
+date: 2024-05-21
 tags: travel, theater, review
 slug: berlin-theater-program
 author: Tian Lin

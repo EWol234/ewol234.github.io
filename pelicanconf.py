@@ -24,13 +24,29 @@ AUTHOR_FEED_RSS = None
 DISPLAY_PAGES_ON_MENU = True
 DEFAULT_PAGINATION = False
 # Uncomment following line if you want document-relative URLs when developing
-RELATIVE_URLS = True
+# RELATIVE_URLS = True
 
+# Taking the .html out of all URLs
+ARTICLE_URL = '{slug}/'
+PAGE_URL = '{slug}/'
+ARTICLE_LANG_URL = '{slug}-{lang}/'
+DRAFT_URL = 'drafts/{slug}/'
+DRAFT_LANG_URL = 'drafts/{slug}-{lang}/'
+PAGE_URL = 'pages/{slug}/'
+PAGE_LANG_URL = 'pages/{slug}-{lang}/'
+DRAFT_PAGE_URL = 'drafts/pages/{slug}/'
+DRAFT_PAGE_LANG_URL = 'drafts/pages/{slug}-{lang}/'
+AUTHOR_URL = 'author/{slug}/'
+CATEGORY_URL = 'category/{slug}/'
+TAG_URL = 'tag/{slug}/'
 
 # Customization
 THEME = 'themes/pelican-hyde'
 COLOR_THEME = '07'
-SOCIAL = (('youtube', 'https://www.youtube.com/@tian_creator'),
+
+# The first part of the tuple should be the name of the icon
+# you want from this list: https://forkaweso.me/Fork-Awesome/icons/
+SOCIAL = (('youtube-play', 'https://www.youtube.com/@tian_creator'),
           ('instagram', 'https://www.instagram.com/tian_creator'),
           ('linkedin', 'linkedin.com/in/tian-lin-mit'),)
 
