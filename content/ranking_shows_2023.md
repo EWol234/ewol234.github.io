@@ -1,5 +1,5 @@
 title: 52 Weeks, 52 Shows (2023)
-date: 2024-05-22
+date: 2024-05-21
 tags: theater, review
 slug: ranking-shows-2023
 author: Tian Lin

@@ -1,5 +1,5 @@
 title: LAMBDA Classical Acting Program, Fall 2023
-date: 2024-05-22
+date: 2024-05-21
 tags: travel, theater, review
 slug: lambda-classical-acting
 author: Tian Lin

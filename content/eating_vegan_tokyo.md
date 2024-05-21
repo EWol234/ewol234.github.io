@@ -1,5 +1,5 @@
 title: Eating vegan in Tokyo
-date: 2024-05-22
+date: 2024-05-21
 tags: travel, food
 slug: eating-vegan-tokyo
 author: Tian Lin

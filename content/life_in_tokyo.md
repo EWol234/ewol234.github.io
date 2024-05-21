@@ -1,5 +1,5 @@
 title: Living in Tokyo as a foreigner
-date: 2024-05-22
+date: 2024-05-21
 tags: travel
 slug: life-in-tokyo
 author: Tian Lin

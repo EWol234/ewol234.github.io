@@ -1,5 +1,5 @@
 title: Teaching in Bangalore
-date: 2024-05-22
+date: 2024-05-21
 tags: travel, teaching
 slug: teaching-in-bangalore
 author: Tian Lin
