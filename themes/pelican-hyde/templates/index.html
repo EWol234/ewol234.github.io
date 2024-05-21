@@ -18,11 +18,13 @@
 						</ul>
 					</span>
 				{% endif %}
-				<p>
-					{{ article.summary }}
-				</p>
-                <a class="read-more" href="{{ SITEURL }}/{{ article.url }}">Continue reading »</a>
-			</div>
+                {% if article.sumary %}
+				    <p>
+					    {{ article.summary }}
+				    </p>
+                    <a class="read-more" href="{{ SITEURL }}/{{ article.url }}">Continue reading »</a>
+			    {% endif %}
+            </div>
 		{% endfor %}
 	</div>
 	{% if DEFAULT_PAGINATION %}
