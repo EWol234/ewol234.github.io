@@ -14,5 +14,9 @@ I used a static-site generator called [Pelican](https://docs.getpelican.com/en/4
 I got the domain from Squarespace, if you want to keep it you can make an account and I'll add you as an administrator so you can point to your repo, or you can get your own domain and point it to your repo yourself.
 
 ### How content?
-Content-wise, you add posts by adding a new file to the `content/` directory, and pages like "About" go in the `content/pages/` directory. There are two settings files: `pelicanconf.py` and `publishconf.py`, usually you only need to change the first one, the second one imports everything from the first one and adds some stuff for the official published version. Style-wise I added a theme in `themes/pelican-hyde` which I did some customization on, you would edit the templates or CSS files there to change the look. I had to hard-code the "Acting, Travel, Software Engineering" into that to get the icon in the middle lol.
+Content-wise, you add posts by adding a new file to the `content/` directory, and pages like "About" go in the `content/pages/` directory. There are two settings files: `pelicanconf.py` and `publishconf.py`, usually you only need to change the first one, the second one imports everything from the first one and adds some stuff for the official published version.
+
+Style-wise I added a theme in `themes/pelican-hyde` which I did some customization on, you would edit the templates or CSS files there to change the look. I had to hard-code the "Acting, Travel, Software Engineering" into that to get the icon in the middle lol.
+
+The stuff in the sidebar can be configured in `pelicanconf.py`, you can extra links that aren't pages (like the "Home" link) via `MENUITEMS`, and you can add links to your socials via `SOCIAL`.
 
