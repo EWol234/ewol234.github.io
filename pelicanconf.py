@@ -27,18 +27,18 @@ DEFAULT_PAGINATION = False
 # RELATIVE_URLS = True
 
 # Taking the .html out of all URLs
-ARTICLE_URL = '{slug}/'
-PAGE_URL = '{slug}/'
-ARTICLE_LANG_URL = '{slug}-{lang}/'
-DRAFT_URL = 'drafts/{slug}/'
-DRAFT_LANG_URL = 'drafts/{slug}-{lang}/'
-PAGE_URL = 'pages/{slug}/'
-PAGE_LANG_URL = 'pages/{slug}-{lang}/'
-DRAFT_PAGE_URL = 'drafts/pages/{slug}/'
-DRAFT_PAGE_LANG_URL = 'drafts/pages/{slug}-{lang}/'
-AUTHOR_URL = 'author/{slug}/'
-CATEGORY_URL = 'category/{slug}/'
-TAG_URL = 'tag/{slug}/'
+ARTICLE_URL = '{slug}'
+PAGE_URL = '{slug}'
+ARTICLE_LANG_URL = '{slug}-{lang}'
+DRAFT_URL = 'drafts/{slug}'
+DRAFT_LANG_URL = 'drafts/{slug}-{lang}'
+PAGE_URL = 'pages/{slug}'
+PAGE_LANG_URL = 'pages/{slug}-{lang}'
+DRAFT_PAGE_URL = 'drafts/pages/{slug}'
+DRAFT_PAGE_LANG_URL = 'drafts/pages/{slug}-{lang}'
+AUTHOR_URL = 'author/{slug}'
+CATEGORY_URL = 'category/{slug}'
+TAG_URL = 'tag/{slug}'
 
 STATIC_PATHS = ['images', 'extra']
 EXTRA_PATH_METADATA = {
