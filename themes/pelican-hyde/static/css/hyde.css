@@ -84,6 +84,12 @@ html {
   font-size: 3rem;
 }
 
+.sidebar-about h5 {
+  color: #fff;
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
 .sidebar-about a {
   text-decoration: none;
 }
