@@ -29,7 +29,7 @@ RELATIVE_URLS = True
 
 # Customization
 THEME = 'themes/pelican-hyde'
-COLOR_THEME = '0a'
+COLOR_THEME = '07'
 SOCIAL = (('youtube', 'https://www.youtube.com/@tian_creator'),
           ('instagram', 'https://www.instagram.com/tian_creator'),
           ('linkedin', 'linkedin.com/in/tian-lin-mit'),)

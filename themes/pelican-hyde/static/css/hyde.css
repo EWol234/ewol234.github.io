@@ -73,19 +73,19 @@ html {
 
 /* Sidebar links */
 .sidebar a {
-  color: #fff;
+  color: #934b23;
 }
 
 /* About section */
 
 .sidebar-about h1 {
-  color: #fff;
+  color: #934b23;
   margin-top: 0;
   font-size: 3rem;
 }
 
 .sidebar-about h5 {
-  color: #fff;
+  color: #934b23;
   margin-top: 0;
   margin-bottom: 2rem;
 }
@@ -161,6 +161,14 @@ a.sidebar-social-item.active:focus {
 }
 
 
+/* Posts
+ */
+
+.post h1 {
+  color: #934b23;
+}
+
+
 /* Container
  *
  * Align the contents of the site above the proper threshold with some margin-fu
@@ -222,6 +230,15 @@ a.sidebar-social-item.active:focus {
  */
 
 /* Base16 (http://chriskempson.github.io/base16/#default) */
+
+/* Custom */
+.theme-base-07 .sidebar {
+  background-color: #f8b8c9;
+}
+.theme-base-07 .content a,
+.theme-base-07 .related-posts li a:hover {
+  color: #934b23;
+}
 
 /* Red */
 .theme-base-08 .sidebar {
