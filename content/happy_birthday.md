@@ -8,7 +8,7 @@ summary: Read here for how to take over this website
 ### How website?
 All the code for the site is on [this Github repo](https://github.com/EWol234/ewol234.github.io), which is also where I'm hosting it. You can copy this and put it on your own `username.github.io` repo to host, and it should just work (I think).
 
-I used a static-site generator called [Pelican](https://docs.getpelican.com/en/4.9.1/index.html), the Github repo can be set up to run this whenever you push some changes so it automatically recreates your pages. You'll just need to tell it to use a custom build action, you can see the docs for that [here](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-with-a-custom-github-actions-workflow).
+I used a static-site generator called [Pelican](https://docs.getpelican.com/en/4.9.1/index.html), the Github repo can be set up to run this whenever you push some changes so it automatically recreates your pages. You'll just need to tell it to use the custom build action that's already in the repo, you can see the docs for that [here](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-with-a-custom-github-actions-workflow).
 
 ### How domain?
 I got the domain from Squarespace, if you want to keep it you can make an account and I'll add you as an administrator so you can point to your repo, or you can get your own domain and point it to your repo yourself.
