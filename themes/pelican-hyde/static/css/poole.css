@@ -348,9 +348,32 @@ tbody tr:nth-child(odd) th {
 .post-date {
   display: block;
   margin-top: -.5rem;
+  color: #9a9a9a;
+}
+
+/* Author line below post date */
+.post-author {
+  display: block;
+  margin-top: -0.25rem;
   margin-bottom: 1rem;
   color: #9a9a9a;
 }
+
+.post-author ul {
+  margin: 0;
+  padding: 0;
+  display: inline;
+}
+.post-author li {
+  display: inline;
+}
+.post-author li:after {
+  content: ", ";
+}
+.post-author li:last-child:after {
+  content: "";
+}
+
 
 .post-tags {
   display: inline;

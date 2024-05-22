@@ -12,7 +12,21 @@
 <div class="post">
 	<h1 class="post-title">{{ article.title }}</h1>
 	<span class="post-date">{{ article.locale_date }}</span>
-	{{ article.content }}
+    <span class="post-author">
+        {% if article.authors %}
+            By:
+            <ul>
+                {% for author in article.authors %}
+                    <li>
+                        <a href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% elif article.author %}
+            By: <a href="{{ SITEURL }}/{{ article.author.url }}">{{ article.author }}</a>
+        {% endif %}
+    </span>
+    {{ article.content }}
 
 	{% if article.tags %}
 		<span class="post-tags">
