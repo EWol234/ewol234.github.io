@@ -1,0 +1,55 @@
+<nav class="navbar bg-pink-200">
+    <div class="navbar-start">
+        <div class="dropdown">
+          <div tabindex="0" role="button" class="btn btn-ghost btn-circle text-yellow-800">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h7" />
+            </svg>
+          </div>
+          <ul
+            tabindex="0"
+            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+            {% if MENUITEMS %}
+				{% for title, url in MENUITEMS %}
+					<li>
+                        <a class="text-yellow-800" href="{{ url }}">{{ title }}</a>
+                    </li>
+				{% endfor %}
+			{% endif %}
+			{% if DISPLAY_PAGES_ON_MENU %}
+				{% for p in pages %}
+					<li>
+                        <a class="text-yellow-800" href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a>
+                    </li>
+				{% endfor %}
+			{% endif %} 
+          </ul>
+        </div>
+    </div>
+    <div class="navbar-center">
+        <strong class="text-yellow-800" style="font-family: Pacifico, sans-serif; font-size: 1.5rem">
+            <a class="navbar-brand" href="/">{{ SITENAME }}</a>
+        </strong>
+    </div>
+    <div class="navbar-end">
+        <ul class="menu menu-horizontal">
+            {% for name, link in SOCIAL %}
+                <li class="nav-item">
+                    <a style="font-size: 1rem" class="text-yellow-800" href="{{ link }}" target="_blank">
+                        <i class="fa fa-{{ name }}"></i>
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</nav>
+

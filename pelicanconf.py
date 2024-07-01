@@ -50,7 +50,7 @@ EXTRA_PATH_METADATA = {
 SUMMARY_MAX_LENGTH = 0
 
 # Customization
-THEME = 'themes/pelican-tian-2'
+THEME = 'themes/pelican-hyde'
 COLOR_THEME = '07'
 
 # The first part of the tuple should be the name of the icon
