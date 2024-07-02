@@ -61,4 +61,4 @@ SOCIAL = (('youtube-play', 'https://www.youtube.com/@tian_creator'),
 
 PROFILE_IMAGE = 'avatar.jpg'
 
-MENUITEMS = (('Home', '/'),)
+MENUITEMS = (('Home', SITEURL),)
