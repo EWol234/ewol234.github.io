@@ -17,7 +17,7 @@
           </div>
           <ul
             tabindex="0"
-            class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+            class="menu menu-sm dropdown-content bg-pink-50 rounded-box z-[1] mt-3 w-52 p-2 shadow">
             {% if MENUITEMS %}
 				{% for title, url in MENUITEMS %}
 					<li>
@@ -34,21 +34,21 @@
 			{% endif %} 
           </ul>
         </div>
-        <div class="visible md:invisible">
+        <div class="md:hidden">
             <strong class="text-yellow-800" style="font-family: Pacifico, sans-serif; font-size: 1.5rem">
                 <a class="navbar-brand" href="{{ SITEURL }}">{{ SITENAME }}</a>
             </strong>
         </div>
     </div>
     <div class="navbar-center">
-        <div class="invisible md:visible">
+        <div class="hidden md:flex">
             <strong class="text-yellow-800" style="font-family: Pacifico, sans-serif; font-size: 1.5rem">
                 <a class="navbar-brand" href="{{ SITEURL }}">{{ SITENAME }}</a>
             </strong>
         </div>
     </div>
     <div class="navbar-end">
-        <div class="invisible md:visible">
+        <div class="hidden md:flex">
             <ul class="menu menu-horizontal">
                 {% for name, link in SOCIAL %}
                     <li class="nav-item">
