@@ -34,22 +34,31 @@
 			{% endif %} 
           </ul>
         </div>
+        <div class="visible md:invisible">
+            <strong class="text-yellow-800" style="font-family: Pacifico, sans-serif; font-size: 1.5rem">
+                <a class="navbar-brand" href="{{ SITEURL }}">{{ SITENAME }}</a>
+            </strong>
+        </div>
     </div>
     <div class="navbar-center">
-        <strong class="text-yellow-800" style="font-family: Pacifico, sans-serif; font-size: 1.5rem">
-            <a class="navbar-brand" href="{{ SITEURL }}">{{ SITENAME }}</a>
-        </strong>
+        <div class="invisible md:visible">
+            <strong class="text-yellow-800" style="font-family: Pacifico, sans-serif; font-size: 1.5rem">
+                <a class="navbar-brand" href="{{ SITEURL }}">{{ SITENAME }}</a>
+            </strong>
+        </div>
     </div>
-    <div class="navbar-end hidden md:flex">
-        <ul class="menu menu-horizontal">
-            {% for name, link in SOCIAL %}
-                <li class="nav-item">
-                    <a style="font-size: 1rem" class="text-yellow-800" href="{{ link }}" target="_blank">
-                        <i class="fa fa-{{ name }}"></i>
-                    </a>
-                </li>
-            {% endfor %}
-        </ul>
+    <div class="navbar-end">
+        <div class="invisible md:visible">
+            <ul class="menu menu-horizontal">
+                {% for name, link in SOCIAL %}
+                    <li class="nav-item">
+                        <a style="font-size: 1rem" class="text-yellow-800" href="{{ link }}" target="_blank">
+                            <i class="fa fa-{{ name }}"></i>
+                        </a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
     </div>
 </nav>
 
