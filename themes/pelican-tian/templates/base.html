@@ -24,19 +24,18 @@
 		<link href="//fonts.googleapis.com/" rel="dns-prefetch">
 		<link href="//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic|Abril+Fatface|PT+Sans:400,400italic,700&amp;subset=latin,latin-ext" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
     
 
         <link href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/daisy.min.css" rel="stylesheet" type="text/css" />
         <script src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/js/tailwind.js"></script>
 
-        <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/Fork-Awesome-1.2.0/css/fork-awesome.min.css" />
+        <script src="https://kit.fontawesome.com/dd0be32b11.js" crossorigin="anonymous"></script>
 	</head>
 
 	<body class="min-h-screen bg-pink-50">
         {% include 'navbar.html' %}
-	    <!-- <div class="content container">
-	    	{% block content %}
-	    	{% endblock %}
-        </div> -->
+		{% block content %}
+	    {% endblock %}
 	</body>
 </html>
