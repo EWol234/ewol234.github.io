@@ -1,8 +1,9 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <div class="hero w-full mt-6">
-      <div class="hero-content w-full flex-col space-y-10 md:flex-row md:space-x-20">
+<div class="space-y-20">
+    <div class="grid w-full place-items-center bg-cover bg-center mt-6">
+      <div class="z-0 flex items-center justify-center w-full flex-col space-y-10 md:flex-row md:space-x-20">
         <div>
           <p class="text-4xl font-bold text-yellow-800 text-center" style="font-family: Shadows Into Light, sans-serif;">
             Acting <i class="fa fa-arrows-to-dot"></i> Travel<br>Software Engineering
@@ -13,4 +14,15 @@
           class="max-[420px]:max-w-full rounded-lg shadow-2xl object-contain min-[420px]:max-w-sm h-128" />
       </div>
     </div>
+    <div class="w-full px-12">
+        <p class="text-2xl font-bold text-yellow-800">Posts</p>
+        {% for article in articles_page.object_list %}
+            <p class="text-xl font-bold text-yellow-800">
+                <a href="{{ SITEURL }}/{{ article.url }}">
+                    {{ article.title }}
+                </a>
+            </p>
+        {% endfor %}
+    </div>
+</div>
 {% endblock %}
