@@ -28,14 +28,18 @@ DEFAULT_PAGINATION = False
 
 # Taking the .html out of all URLs
 ARTICLE_URL = '{slug}'
-PAGE_URL = '{slug}'
 ARTICLE_LANG_URL = '{slug}-{lang}'
+
+PAGE_URL = '{slug}'
+PAGE_LANG_URL = '{slug}-{lang}'
+PAGE_SAVE_AS = '{slug}.html'
+
 DRAFT_URL = 'drafts/{slug}'
 DRAFT_LANG_URL = 'drafts/{slug}-{lang}'
-PAGE_URL = 'pages/{slug}'
-PAGE_LANG_URL = 'pages/{slug}-{lang}'
-DRAFT_PAGE_URL = 'drafts/pages/{slug}'
-DRAFT_PAGE_LANG_URL = 'drafts/pages/{slug}-{lang}'
+
+DRAFT_PAGE_URL = 'drafts/{slug}'
+DRAFT_PAGE_LANG_URL = 'drafts/{slug}-{lang}'
+
 AUTHOR_URL = 'author/{slug}'
 CATEGORY_URL = 'category/{slug}'
 TAG_URL = 'tag/{slug}'
@@ -62,3 +66,11 @@ SOCIAL = (('youtube-play', 'https://www.youtube.com/@tian_creator'),
 PROFILE_IMAGE = 'avatar.jpg'
 
 MENUITEMS = (('Home', ''),)
+
+
+FRONT_PAGE_TAGS = {
+    "travel": {"title": "Travel"},
+    "theater": {"title": "Theater"},
+    "review": {"title": "Review"},
+}
+
