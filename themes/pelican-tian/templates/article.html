@@ -9,34 +9,26 @@
 {% endblock %}
 
 {% block content %}
-<div class="post">
-	<h1 class="post-title">{{ article.title }}</h1>
-	<span class="post-date">{{ article.locale_date }}</span>
-    <span class="post-author">
-        {% if article.authors %}
-            By:
-            <ul>
-                {% for author in article.authors %}
-                    <li>
-                        <a href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
-                    </li>
-                {% endfor %}
-            </ul>
-        {% elif article.author %}
-            By: <a href="{{ SITEURL }}/{{ article.author.url }}">{{ article.author }}</a>
-        {% endif %}
-    </span>
-    {{ article.content }}
+<div class="max-w-screen-lg w-full p-6">
+	<p class="font-semibold text-yellow-800 text-2xl">{{ article.title }}</p>
+	<p class="text-slate-500 text-lg">{{ article.locale_date }}</p>
+    {% if article.author %}
+        <p class="text-slate-800 text-lg">
+            By: <a href="{{ SITEURL }}/{{ article.author.url }}" class="text-yellow-800 hover:underline">{{ article.author }}</a>
+        </p>
+    {% endif %}
+    
+    <div class="prose py-6 text-lg text-pretty text-stone-800 leading-relaxed" style="font-family: Montserrat, sans-serif">
+        {{ article.content }}
+    </div>
 
 	{% if article.tags %}
-		<span class="post-tags">
-			Tags:
-			<ul>
-				{% for tag in article.tags %}
-					<li><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a></li>
-				{% endfor %}
-			</ul>
-		</span>
-	{% endif %}
+        <p class="text-slate-800 text-lg">
+            Tags: 
+		    {% for tag in article.tags %}
+                <a class="text-yellow-800 hover:underline" href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>{{ "," if not loop.last else "" }}
+			{% endfor %}
+		</p>
+    {% endif %}
 </div>
 {% endblock %}
