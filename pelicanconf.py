@@ -60,7 +60,7 @@ COLOR_THEME = '07'
 # The first part of the tuple should be the name of the icon
 # you want from this list: https://forkaweso.me/Fork-Awesome/icons/
 SOCIAL = (('youtube-play', 'https://www.youtube.com/@tian_creator'),
-          ('instagram', 'https://www.instagram.com/tian_creator'),
+          ('instagram', 'https://www.instagram.com/tianlifey'),
           ('linkedin', 'https://linkedin.com/in/tian-lin-mit'),)
 
 PROFILE_IMAGE = 'avatar.jpg'
