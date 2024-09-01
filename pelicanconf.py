@@ -1,3 +1,19 @@
+import os
+import sys
+sys.path.append(os.curdir)
+
+from markdown_custom import TianExtension
+
+MARKDOWN = {
+  'extensions': [TianExtension()],
+  'extension_configs': {
+    'markdown.extensions.extra': {},
+    'markdown.extensions.meta': {},
+  },
+  'output_format': 'html5',
+}
+
+
 AUTHOR = 'Tian Lin'
 SITENAME = 'Tian Lin'
 SITEURL = 'http://localhost:8000'
