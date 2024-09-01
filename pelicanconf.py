@@ -73,8 +73,7 @@ EXTRA_PATH_METADATA = {
 SUMMARY_MAX_LENGTH = 0
 
 # Customization
-THEME = 'themes/pelican-hyde'
-COLOR_THEME = '07'
+THEME = 'themes/pelican-tian'
 TEMPLATE_PAGES = {
     "home.html": "index.html"
 }
