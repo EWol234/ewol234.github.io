@@ -69,8 +69,17 @@ MENUITEMS = (('Home', ''),)
 
 
 FRONT_PAGE_TAGS = {
-    "travel": {"title": "Travel"},
-    "theater": {"title": "Theater"},
-    "review": {"title": "Review"},
+    "travel": {
+        "title": "Travel",
+        "thumbnail": "compass.webp"
+    },
+    "theater": {
+        "title": "Theater",
+        "thumbnail": "masks.webp"
+    },
+    "review": {
+        "title": "Reviews",
+        "thumbnail": "quill.webp"
+    },
 }
 

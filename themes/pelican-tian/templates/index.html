@@ -2,7 +2,7 @@
 
 {% block content %}
 <div class="space-y-20">
-    <div class="grid px-6 w-full place-items-center bg-cover bg-center mt-6">
+    <div class="grid px-6 w-full place-items-center bg-cover bg-center mt-6 pb-6">
       <div class="z-0 flex items-center justify-center w-full flex-col space-y-10 md:flex-row md:space-x-20">
         <div>
           <p class="text-4xl font-bold text-yellow-800 text-center" style="font-family: Shadows Into Light, sans-serif;">
@@ -11,20 +11,20 @@
         </div>
         <img
           src="{{ SITEURL }}/images/profile.jpg"
-          class="max-[420px]:max-w-full rounded-lg shadow-2xl object-contain min-[420px]:max-w-sm h-128" />
+          class="max-[420px]:max-w-full rounded-lg shadow-2xl object-contain min-[420px]:max-w-sm h-128"
+        />
       </div>
     </div>
-    <!--
-    <div class="w-full px-12">
-        <p class="text-2xl font-bold text-yellow-800">Posts</p>
-        {% for article in articles_page.object_list %}
-            <p class="text-xl font-bold text-yellow-800">
-                <a href="{{ SITEURL }}/{{ article.url }}">
-                    {{ article.title }}
-                </a>
-            </p>
+    <div class="max-w-screen-lg p-6 grid grid-cols-1 sm:grid-cols-3 gap-8">
+        {% for tag, params in FRONT_PAGE_TAGS.items() %}
+            <div class="bg-gray-100 rounded-lg flex flex-col shadow">
+                <p class="text-xl text-center font-bold text-yellow-800 mt-4">{{ params["title"] }}</p>
+                <img
+                  src="{{ SITEURL }}/images/{{ params["thumbnail"] }}"
+                  class="pt-4 flex-1 rounded-lg" 
+                />
+            </div>
         {% endfor %}
     </div>
-    -->
 </div>
 {% endblock %}
