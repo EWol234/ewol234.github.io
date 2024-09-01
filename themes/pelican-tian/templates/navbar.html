@@ -21,14 +21,14 @@
             {% if MENUITEMS %}
 				{% for title, url in MENUITEMS %}
 					<li>
-                        <a class="text-yellow-800" href="{{ SITEURL}}/{{ url }}">{{ title }}</a>
+                        <a class="text-yellow-800" href="{{ SITEURL}}/{{ url }}/">{{ title }}</a>
                     </li>
 				{% endfor %}
 			{% endif %}
 			{% if DISPLAY_PAGES_ON_MENU %}
 				{% for p in pages %}
 					<li>
-                        <a class="text-yellow-800" href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a>
+                        <a class="text-yellow-800" href="{{ SITEURL }}/{{ p.url }}/">{{ p.title }}</a>
                     </li>
 				{% endfor %}
 			{% endif %} 
