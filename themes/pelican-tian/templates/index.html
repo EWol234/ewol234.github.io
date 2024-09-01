@@ -1,47 +1,35 @@
 {% extends "base.html" %}
 
 {% block content %}
-	<div class="posts">
+	<div class="flex flex-col space-y-10 max-w-screen-lg w-full p-6">
 		{% for article in articles_page.object_list %}
-			<div class="post">
-				<h2 class="post-title" href="{{ SITEURL }}/{{ article.url }}">
+			<div class="flex flex-col">
+				<p class="font-semibold text-yellow-800 text-2xl">
 					<a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a>
-				</h2>
-				<span class="post-date">{{ article.locale_date }}</span>
+				</p>
+				<p class="text-slate-500 text-xl">{{ article.locale_date }}</p>
 				{% if article.tags %}
-					<span class="post-tags">
-						Tags:
-						<ul>
+					<div class="flex flex-row space-x-2">
+                        <p class="text-slate-800 text-xl">Tags: </p>
+						<div class="flex flex-row space-x-2">
 							{% for tag in article.tags %}
-								<li><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a></li>
+                                <div class="flex flex-row">
+                                    <p class="text-yellow-800 text-xl hover:underline"><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a></p>
+                                    <p class="text-slate-800 text-xl">{{ "," if not loop.last else "" }}</p>
+                                </div>
 							{% endfor %}
-						</ul>
-					</span>
+						</div>
+					</div>
 				{% endif %}
                 {% if article.summary %}
-				    <p>
-					    {{ article.summary }}
-				    </p>
-                    <a class="read-more" href="{{ SITEURL }}/{{ article.url }}">Continue reading »</a>
+                    <div class="flex flex-col pt-2">
+				        <div class="text-slate-800 text-xl">
+					        {{ article.summary }}
+				        </div>
+                        <p class="text-yellow-800 text-xl"><a class="read-more" href="{{ SITEURL }}/{{ article.url }}">Continue reading »</a></p>
+                    </div>
 			    {% endif %}
             </div>
 		{% endfor %}
 	</div>
-	{% if DEFAULT_PAGINATION %}
-	<div class="pagination">
-
-		{% if articles_page.has_previous() %}
-		{% set num = articles_page.previous_page_number() %}
-		<span class="pagination-item older"><a href="{{ SITEURL }}/{{ page_name }}{{ num if num > 1 else '' }}.html">Newer</a></span>
-		{% else %}
-		<span class="pagination-item older">Newer</span>
-		{% endif %}
-
-		{% if articles_page.has_next() %}
-		<span class="pagination-item newer"><a href="{{ SITEURL }}/{{ page_name }}{{ articles_page.next_page_number() }}.html">Older</a></span>
-		{% else %}
-		<span class="pagination-item newer">Older</span>
-		{% endif %}
-	</div>
-	{% endif %}
 {% endblock %}
