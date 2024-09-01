@@ -26,6 +26,9 @@ DEFAULT_PAGINATION = False
 # Uncomment following line if you want document-relative URLs when developing
 # RELATIVE_URLS = True
 
+# Overriding index page
+INDEX_SAVE_AS = 'posts.html'
+
 # Taking the .html out of all URLs
 ARTICLE_URL = '{slug}'
 ARTICLE_LANG_URL = '{slug}-{lang}'
@@ -56,6 +59,9 @@ SUMMARY_MAX_LENGTH = 0
 # Customization
 THEME = 'themes/pelican-hyde'
 COLOR_THEME = '07'
+TEMPLATE_PAGES = {
+    "home.html": "index.html"
+}
 
 # The first part of the tuple should be the name of the icon
 # you want from this list: https://forkaweso.me/Fork-Awesome/icons/
@@ -65,7 +71,11 @@ SOCIAL = (('youtube-play', 'https://www.youtube.com/@tian_creator'),
 
 PROFILE_IMAGE = 'avatar.jpg'
 
-MENUITEMS = (('Home', ''),)
+MENUITEMS = (
+    ('Home', ''),
+    ('About', 'about'),
+    ('Posts', 'posts'),
+)
 
 
 FRONT_PAGE_TAGS = {

@@ -1,30 +1,47 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="space-y-20">
-    <div class="grid px-6 w-full place-items-center bg-cover bg-center mt-6 pb-6">
-      <div class="z-0 flex items-center justify-center w-full flex-col space-y-10 md:flex-row md:space-x-20">
-        <div>
-          <p class="text-4xl font-bold text-yellow-800 text-center" style="font-family: Shadows Into Light, sans-serif;">
-            Acting <i class="fa fa-arrows-to-dot"></i> Travel<br>Software Engineering
-          </p>
-        </div>
-        <img
-          src="{{ SITEURL }}/images/profile.jpg"
-          class="max-[420px]:max-w-full rounded-lg shadow-2xl object-contain min-[420px]:max-w-sm h-128"
-        />
-      </div>
-    </div>
-    <div class="max-w-screen-lg p-6 grid grid-cols-1 sm:grid-cols-3 gap-8">
-        {% for tag, params in FRONT_PAGE_TAGS.items() %}
-            <div class="bg-gray-100 rounded-lg flex flex-col shadow">
-                <p class="text-xl text-center font-bold text-yellow-800 mt-4">{{ params["title"] }}</p>
-                <img
-                  src="{{ SITEURL }}/images/{{ params["thumbnail"] }}"
-                  class="pt-4 flex-1 rounded-lg" 
-                />
+	<div class="posts">
+		{% for article in articles_page.object_list %}
+			<div class="post">
+				<h2 class="post-title" href="{{ SITEURL }}/{{ article.url }}">
+					<a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a>
+				</h2>
+				<span class="post-date">{{ article.locale_date }}</span>
+				{% if article.tags %}
+					<span class="post-tags">
+						Tags:
+						<ul>
+							{% for tag in article.tags %}
+								<li><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a></li>
+							{% endfor %}
+						</ul>
+					</span>
+				{% endif %}
+                {% if article.summary %}
+				    <p>
+					    {{ article.summary }}
+				    </p>
+                    <a class="read-more" href="{{ SITEURL }}/{{ article.url }}">Continue reading »</a>
+			    {% endif %}
             </div>
-        {% endfor %}
-    </div>
-</div>
+		{% endfor %}
+	</div>
+	{% if DEFAULT_PAGINATION %}
+	<div class="pagination">
+
+		{% if articles_page.has_previous() %}
+		{% set num = articles_page.previous_page_number() %}
+		<span class="pagination-item older"><a href="{{ SITEURL }}/{{ page_name }}{{ num if num > 1 else '' }}.html">Newer</a></span>
+		{% else %}
+		<span class="pagination-item older">Newer</span>
+		{% endif %}
+
+		{% if articles_page.has_next() %}
+		<span class="pagination-item newer"><a href="{{ SITEURL }}/{{ page_name }}{{ articles_page.next_page_number() }}.html">Older</a></span>
+		{% else %}
+		<span class="pagination-item newer">Older</span>
+		{% endif %}
+	</div>
+	{% endif %}
 {% endblock %}

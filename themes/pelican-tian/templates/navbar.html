@@ -25,13 +25,6 @@
                     </li>
 				{% endfor %}
 			{% endif %}
-			{% if DISPLAY_PAGES_ON_MENU %}
-				{% for p in pages %}
-					<li>
-                        <a class="text-yellow-800" href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a>
-                    </li>
-				{% endfor %}
-			{% endif %} 
           </ul>
         </div>
         <div class="md:hidden">
