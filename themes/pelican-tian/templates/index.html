@@ -10,15 +10,12 @@
 				<p class="text-slate-500 text-xl">{{ article.locale_date }}</p>
 				{% if article.tags %}
 					<div class="flex flex-row space-x-2">
-                        <p class="text-slate-800 text-xl">Tags: </p>
-						<div class="flex flex-row space-x-2">
+                        <p class="text-xl text-slate-800">
+                            Tags: 
 							{% for tag in article.tags %}
-                                <div class="flex flex-row">
-                                    <p class="text-yellow-800 text-xl hover:underline"><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a></p>
-                                    <p class="text-slate-800 text-xl">{{ "," if not loop.last else "" }}</p>
-                                </div>
+                                <a class="text-yellow-800 hover:underline" href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>{{ "," if not loop.last else "" }}
 							{% endfor %}
-						</div>
+						</p>
 					</div>
 				{% endif %}
                 {% if article.summary %}
