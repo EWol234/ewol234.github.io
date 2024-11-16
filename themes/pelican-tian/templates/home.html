@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="space-y-20">
+<div class="space-y-20 w-full bg-gradient-to-b">
     <div class="grid px-6 w-full place-items-center bg-cover bg-center mt-6 pb-6">
       <div class="z-0 flex items-center justify-center w-full flex-col space-y-10 md:flex-row md:space-x-20">
         <div>
@@ -15,18 +15,20 @@
         />
       </div>
     </div>
-    <div class="max-w-screen-lg p-6 grid grid-cols-1 sm:grid-cols-3 gap-8">
-        {% for tag, params in FRONT_PAGE_TAGS.items() %}
-            <div class="bg-gray-100 rounded-lg flex flex-col shadow">
-                <a href="{{ SITEURL }}/tag/{{ tag }}">
-                    <p class="text-xl text-center font-bold text-yellow-800 mt-4">{{ params["title"] }}</p>
-                    <img
-                        src="{{ SITEURL }}/images/{{ params["thumbnail"] }}"
-                        class="pt-4 flex-1 rounded-lg" 
-                    />
-                </a>
-            </div>
-        {% endfor %}
+    <div class="w-full flex justify-center items-center">
+        <div class="max-w-screen-lg p-6 grid grid-cols-1 sm:grid-cols-3 gap-8">
+            {% for tag, params in FRONT_PAGE_TAGS.items() %}
+                <div class="bg-gray-100 rounded-lg flex flex-col shadow">
+                    <a href="{{ SITEURL }}/tag/{{ tag }}">
+                        <p class="text-xl text-center font-bold text-yellow-800 mt-4">{{ params["title"] }}</p>
+                        <img
+                            src="{{ SITEURL }}/images/{{ params["thumbnail"] }}"
+                            class="pt-4 flex-1 rounded-lg" 
+                        />
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
     </div>
 </div>
 {% endblock %}
