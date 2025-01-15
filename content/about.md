@@ -1,5 +1,4 @@
 ---
-title: "About"
 showDate: false
 showReadingTime: false
 showAuthor: false
