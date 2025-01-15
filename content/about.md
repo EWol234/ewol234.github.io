@@ -2,7 +2,11 @@
 title: "About"
 showDate: false
 showReadingTime: false
+showAuthor: false
 ---
+
+{{< profile >}}
+
 
 Acting! Traveling! Education! Software Engineering! Do any of these words spark your interest?
 
