@@ -1,4 +1,8 @@
-Title: About
+---
+title: "About"
+showDate: false
+showReadingTime: false
+---
 
 Acting! Traveling! Education! Software Engineering! Do any of these words spark your interest?
 
