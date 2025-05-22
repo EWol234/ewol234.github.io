@@ -2,6 +2,7 @@
 title: "52 Weeks, 52 Shows (2023)"
 date: 2024-05-21
 tags: ["theater", "review"]
+draft: true
 ---
 
 {{< figure src="pie_chart.jpg" alt="Pie chart of shows watched" class="px-6" >}}
