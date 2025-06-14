@@ -9,13 +9,11 @@ copyright = "© 2025 Tian Lin"
 [params]
   dateFormat = "2 January 2006"
   mainSections = ["blog"]
-  # description = "My awesome website"
 
 [params.author]
   name = "Tian Lin"
   image = "images/avatar.jpg"
   headline = "Acting, Travel, Software Engineering"
-  # bio = "A little bit about you"
   links = [
     { instagram = "https://instagram.com/tianlifey" },
     { linkedin = "https://linkedin.com/in/tian-lin-mit" },

@@ -4,7 +4,7 @@
 
 # baseURL = "https://your_domain.com/"
 defaultContentLanguage = "en"
-theme = "congo"
+theme = "congo-updated"
 
 enableRobotsTXT = true
 summaryLength = 0
