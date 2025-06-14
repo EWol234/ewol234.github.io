@@ -1,5 +1,5 @@
 let
-  nixpkgs = fetchTarball "https://github.com/NixOS/nixpkgs/tarball/nixos-24.11";
+  nixpkgs = fetchTarball "https://github.com/NixOS/nixpkgs/tarball/nixos-25.05";
   pkgs = import nixpkgs { config = {}; overlays = []; };
 in
 
@@ -7,8 +7,10 @@ pkgs.mkShellNoCC {
   packages = with pkgs; [
     hugo
     nodejs
-    electron-chromedriver_31
+    electron-chromedriver_36
     xclip
+    claude-code
+    uv
     (pkgs.python3.withPackages (python-pkgs: [
         python-pkgs.requests
         python-pkgs.selenium
