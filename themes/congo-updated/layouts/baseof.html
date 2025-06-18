@@ -21,7 +21,8 @@
       >
     </div>
     {{ $header := print "header/" .Site.Params.header.layout ".html" }}
-    {{ if templates.Exists $header }}
+    {{ $headerCheck := print "_partials/header/" .Site.Params.header.layout ".html" }}
+    {{ if templates.Exists $headerCheck }}
       {{ partial $header . }}
     {{ else }}
       {{ partial "header/basic.html" . }}
