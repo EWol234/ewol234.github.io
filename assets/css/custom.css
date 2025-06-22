@@ -37,3 +37,19 @@ body {
   text-fill-color: transparent;
   text-shadow: 2px 2px 3px rgba(0,0,0,0.2);
 }
+
+/* Blog post list dividers */
+.blog-post-divider {
+  border-bottom: 1px solid #e5e7eb;
+  margin: 1.5rem 0;
+}
+
+/* Dark mode divider */
+.dark .blog-post-divider {
+  border-bottom: 1px solid #374151;
+}
+
+/* Hide the last divider in a section */
+section > .blog-post-divider:last-child {
+  display: none;
+}

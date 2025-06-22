@@ -78,3 +78,7 @@ The site is configured via several files in the `config/_default/` directory:
 - `markup.toml`: Markup rendering settings
 - `menus.en.toml`: Navigation menu configuration
 - `params.toml`: Theme parameters
+
+## Development Best Practices
+
+- Make sure you follow the proper technique of customizing styles in Hugo by using the top-level `layouts/` directory.
