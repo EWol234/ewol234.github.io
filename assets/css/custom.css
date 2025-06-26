@@ -11,7 +11,13 @@ body {
 }
 
 /* Fancy site title styling */
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@font-face {
+  font-family: 'Pacifico';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/pacifico-v22-latin-regular.woff2') format('woff2');
+}
 
 .site-title {
   font-family: 'Pacifico', cursive;
