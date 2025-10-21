@@ -1,13 +1,16 @@
 /* Custom styles to override theme defaults */
 
-/* Simple background */
+/* Warm, visually interesting background */
 body {
-  background: #ffffff;
+  background: linear-gradient(135deg, #fef8f5 0%, #f5e9e2 50%, #fef8f5 100%);
+  background-attachment: fixed;
+  min-height: 100vh;
 }
 
-/* Dark mode background */
+/* Dark mode background with subtle gradient */
 .dark body {
-  background: #1a1a1a;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2520 50%, #1a1a1a 100%);
+  background-attachment: fixed;
 }
 
 /* Fancy site title styling */
@@ -58,4 +61,130 @@ body {
 /* Hide the last divider in a section */
 section > .blog-post-divider:last-child {
   display: none;
+}
+
+/* Enhanced article cards with subtle shadows and depth */
+article.prose {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 1.5rem 0;
+  box-shadow: 0px 8px 20px -5px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+article.prose:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 15px 30px -10px rgba(0, 0, 0, 0.12);
+}
+
+.dark article.prose {
+  background: rgba(42, 38, 35, 0.6);
+  box-shadow: 0px 8px 20px -5px rgba(0, 0, 0, 0.3);
+}
+
+.dark article.prose:hover {
+  box-shadow: 0px 15px 30px -10px rgba(0, 0, 0, 0.5);
+}
+
+/* Main content container styling */
+main {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0px 10px 25px -8px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px);
+}
+
+.dark main {
+  background: rgba(30, 30, 30, 0.5);
+  box-shadow: 0px 10px 25px -8px rgba(0, 0, 0, 0.4);
+}
+
+/* Enhanced header styling */
+header {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  box-shadow: 0px 4px 15px -5px rgba(0, 0, 0, 0.08);
+  border-radius: 0 0 16px 16px;
+  margin-bottom: 2rem;
+}
+
+.dark header {
+  background: rgba(30, 30, 30, 0.8);
+  box-shadow: 0px 4px 15px -5px rgba(0, 0, 0, 0.3);
+}
+
+/* Profile section enhancements */
+.profile-card {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 16px;
+  padding: 2.5rem;
+  box-shadow: 0px 12px 30px -10px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.dark .profile-card {
+  background: rgba(42, 38, 35, 0.7);
+  box-shadow: 0px 12px 30px -10px rgba(0, 0, 0, 0.4);
+}
+
+/* Recent articles section */
+.recent-articles {
+  margin-top: 2rem;
+}
+
+/* Typography enhancements */
+h1, h2, h3 {
+  color: #3d2f28;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.dark h1, .dark h2, .dark h3 {
+  color: #e8d5c8;
+}
+
+/* Link styling with warm accents */
+a {
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #d97757;
+}
+
+.dark a:hover {
+  color: #f6a680;
+}
+
+/* Improved spacing and breathing room */
+.max-w-7xl, .max-w-prose {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+/* Card-style list items */
+.blog-list-item {
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 1.25rem;
+  box-shadow: 0px 6px 15px -6px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.blog-list-item:hover {
+  transform: translateX(5px);
+  box-shadow: 0px 10px 25px -8px rgba(0, 0, 0, 0.12);
+}
+
+.dark .blog-list-item {
+  background: rgba(42, 38, 35, 0.5);
+  box-shadow: 0px 6px 15px -6px rgba(0, 0, 0, 0.3);
+}
+
+.dark .blog-list-item:hover {
+  box-shadow: 0px 10px 25px -8px rgba(0, 0, 0, 0.5);
 }
