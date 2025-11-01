@@ -79,6 +79,35 @@ The site is configured via several files in the `config/_default/` directory:
 - `menus.en.toml`: Navigation menu configuration
 - `params.toml`: Theme parameters
 
+## Design Guidelines
+
+This blog follows a **minimalist design philosophy** with carefully considered typography, spacing, and color choices.
+
+**IMPORTANT**: All styling decisions should reference the comprehensive guidelines in `design.md`. This file contains:
+- Complete color palette and usage guidelines
+- Typography system (Lora serif + Inter sans-serif)
+- Spacing scale and layout principles
+- Component styling specifications
+- Responsive design breakpoints
+- Accessibility requirements
+
+### Current Design System
+
+The site uses a custom "minimal" color scheme with:
+- **Colors**: Warm, muted taupes (#C8A898) and soft grays
+- **Typography**: Lora (serif) for headings, Inter (sans-serif) for body text
+- **Layout**: 720px content width, generous whitespace, 8px-based spacing scale
+- **Philosophy**: Minimal but warm, typography-first, content-focused
+
+### Customization Files
+
+- `assets/css/custom.css` - Main stylesheet implementing design.md guidelines
+- `assets/css/schemes/minimal.css` - Custom Congo theme color scheme
+- `config/_default/params.toml` - Theme configuration (uses `colorScheme = "minimal"`)
+
+Before making any styling changes, **always consult design.md** to ensure consistency with the established design system.
+
 ## Development Best Practices
 
 - Make sure you follow the proper technique of customizing styles in Hugo by using the top-level `layouts/` directory.
+- Reference `design.md` for all styling and design decisions.
