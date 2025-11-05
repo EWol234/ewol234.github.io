@@ -10,6 +10,8 @@ pkgs.mkShellNoCC {
     electron-chromedriver_36
     xclip
     claude-code
+    ripgrep
+    gh
     uv
     (pkgs.python3.withPackages (python-pkgs: [
         python-pkgs.requests
