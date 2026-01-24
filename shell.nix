@@ -3,8 +3,15 @@ let
   pkgs = import nixpkgs { config = {}; overlays = []; };
 in
 
-pkgs.mkShellNoCC {
+
+let
+  mcp-server-playwright = pkgs.writeShellScriptBin "mcp-server-playwright" ''
+              export PWMCP_PROFILES_DIR_FOR_TEST="$PWD/.pwmcp-profiles"
+              exec ${pkgs.playwright-mcp}/bin/mcp-server-playwright "$@"
+            '';
+in pkgs.mkShell {
   packages = with pkgs; [
+    mcp-server-playwright
     hugo
     nodejs
     electron-chromedriver_36
