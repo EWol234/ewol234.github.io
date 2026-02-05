@@ -1,16 +1,7 @@
 {{ if .Site.Params.homepage.showRecent | default false }}
-  <div class="section-header">
-    <h2>{{ i18n "shortcode.recent_articles" | emojify }}</h2>
-    <a href="{{ "blog" | relURL }}/" class="section-header-link">
-      View all &rarr;
-    </a>
-  </div>
+  <h2 class="mt-8 text-2xl font-extrabold">{{ i18n "shortcode.recent_articles" | emojify }}</h2>
+  <hr class="w-36 border-dotted border-neutral-400" />
   {{ range first .Site.Params.homepage.recentLimit (.Paginate (where .Site.RegularPages "Type" "in" .Site.Params.mainSections) .Site.Params.homepage.recentLimit).Pages }}
     {{ partial "article-link.html" . }}
   {{ end }}
-  <div class="text-center mt-6">
-    <a href="{{ "blog" | relURL }}/" class="view-all-link">
-      Browse all posts &rarr;
-    </a>
-  </div>
 {{ end }}
