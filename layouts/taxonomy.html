@@ -12,16 +12,23 @@
       </div>
     </section>
   {{ end }}
-  <section class="mt-8">
-    <div class="flex flex-wrap -m-1">
-      {{ range .Data.Terms }}
-        <a href="{{ .Page.RelPermalink }}" class="tag-cloud-item">
-          {{ .Page.Title }}
+  <section class="-mx-2 mt-4 flex flex-col overflow-hidden">
+    {{ range .Data.Terms }}
+      <article class="my-3 w-full overflow-hidden px-2">
+        <h2 class="flex items-center">
+          <a
+            class="text-xl font-medium decoration-primary-500 hover:underline hover:underline-offset-2"
+            href="{{ .Page.RelPermalink }}"
+            >{{ .Page.Title }}</a
+          >
           {{ if $.Site.Params.taxonomy.showTermCount | default true }}
-            <span class="tag-cloud-count">{{ .Count }}</span>
+            <span class="px-2 text-base text-primary-500">&middot;</span>
+            <span class="text-base text-neutral-400">
+              {{ .Count }}
+            </span>
           {{ end }}
-        </a>
-      {{ end }}
-    </div>
+        </h2>
+      </article>
+    {{ end }}
   </section>
 {{ end }}
